@@ -38,7 +38,7 @@ def __load_support_models() -> Tuple[Any, Any, Any, Any]:
     #
     # print('downloading base checkpoint...')
     # base_model.load_state_dict(load_checkpoint(base_name, device))
-    base_model_ckpts_filepath = Path('./model_ckpts/pointE_finetuned.pth')
+    base_model_ckpts_filepath = Path('./model_ckpts/pointE_finetuned_with_330kdata.pth')
     assert base_model_ckpts_filepath.exists()
     assert base_model_ckpts_filepath.is_file()
     print('loading finetuned checkpoint: ', base_model_ckpts_filepath)
