@@ -14,5 +14,4 @@ text-to-3D/shap-e/shapE_inference/
 
 *.swp
 **/__pycache__/
-
-
+**/*.egg-info/
