@@ -18,5 +18,5 @@ PROMPT_FILE="${ROOT_DIR}/prompts/${EXPERIMENT_PREFIX}/${PROMPT}.txt"
 
 CUDA_VISIBLE_DEVICES=${GPU} python3 tt3d_generate.py \
   --prompt-file $PROMPT_FILE \
-  --out-path "${OUT_DIR}/Cap3D-PointE/"
-# --skip-existing
+  --out-path "${OUT_DIR}/Cap3D-PointE/" \
+  --skip-existing
