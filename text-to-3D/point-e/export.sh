@@ -4,10 +4,12 @@ exit 1
 
 
 GPU=0
-PROMPT="test_t3bench_n4"
+ENV="test"
+PROMPT="n0_n1"
+EXPERIMENT_PREFIX="t3bench/single"
 
 ROOT_DIR="/media/data2/mconti/TT3D"
-OUT_DIR="${ROOT_DIR}/outputs/${PROMPT}"
+OUT_DIR="${ROOT_DIR}/outputs/${ENV}/${EXPERIMENT_PREFIX}/${PROMPT}"
 
 
 ###
@@ -15,3 +17,4 @@ OUT_DIR="${ROOT_DIR}/outputs/${PROMPT}"
 
 CUDA_VISIBLE_DEVICES=${GPU} python3 tt3d_export.py \
   --source-path "${OUT_DIR}/Cap3D-PointE/"
+# --skip-existing
