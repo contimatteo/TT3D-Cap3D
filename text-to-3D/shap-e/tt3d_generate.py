@@ -21,7 +21,11 @@ device = Utils.Cuda.init()
 
 
 def _load_models() -> Tuple[Any, GaussianDiffusion]:
+    base_model_ckpts_filepath = Path('./model_ckpts/shapE_finetuned_with_330kdata.pth')
+    assert base_model_ckpts_filepath.exists()
+    assert base_model_ckpts_filepath.is_file()
     model = load_model('text300M', device=device)
+    model.load_state_dict(torch.load(str(base_model_ckpts_filepath), map_location=device)['model_state_dict'])
     diffusion = diffusion_from_config(load_config('diffusion'))
     return model, diffusion
 
