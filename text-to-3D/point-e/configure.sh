@@ -1,9 +1,6 @@
 ###
 
 
-exit 1
-
-
 ROOT_DIR="/media/data2/mconti/TT3D"
 CKPTS_DIR="${ROOT_DIR}/checkpoints/Cap3D"
 
