@@ -16,5 +16,5 @@ OUT_DIR="${ROOT_DIR}/outputs/${ENV}/${EXPERIMENT_PREFIX}/${PROMPT}"
 
 
 CUDA_VISIBLE_DEVICES=${GPU} python3 tt3d_export.py \
-  --source-path "${OUT_DIR}/Cap3D-PointE/" \
+  --source-path "${OUT_DIR}/Cap3D-ShapE/" \
   --skip-existing
