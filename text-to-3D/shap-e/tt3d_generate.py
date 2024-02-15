@@ -53,9 +53,7 @@ def _generate_latents(
     )
 
     if skip_existing and out_prompt_latents_filepath.exists():
-        print("")
-        print("latents already exists -> ", out_prompt_latents_filepath)
-        print("")
+        print("  > latents already exists = ", out_prompt_latents_filepath)
         return
 
     out_prompt_latents_filepath.parent.mkdir(parents=True, exist_ok=True)

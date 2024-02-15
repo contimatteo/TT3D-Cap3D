@@ -93,9 +93,7 @@ def _generate_latents(
     )
 
     if skip_existing and out_prompt_latents_filepath.exists():
-        print("")
-        print("latents already exists -> ", out_prompt_latents_filepath)
-        print("")
+        print("  > latents already exists -> ", out_prompt_latents_filepath)
         return
 
     out_prompt_latents_filepath.parent.mkdir(parents=True, exist_ok=True)
@@ -110,8 +108,6 @@ def _generate_latents(
     assert isinstance(latents, torch.Tensor)
 
     torch.save(latents, out_prompt_latents_filepath)
-
-    # pointclouds_samples: List[PointCloud] = sampler.output_to_point_clouds(output=samples)
 
 
 ###

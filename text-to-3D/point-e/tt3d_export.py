@@ -106,9 +106,7 @@ def _convert_pointclouds_to_objs(
 
     if skip_existing:
         if out_ply_filepath.exists() and out_obj_filepath.exists():
-            print("")
-            print("mesh already exists -> ", out_obj_filepath)
-            print("")
+            print("  > mesh already exists -> ", out_obj_filepath)
             return
 
     out_ply_filepath.parent.mkdir(parents=True, exist_ok=True)
