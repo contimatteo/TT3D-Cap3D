@@ -116,13 +116,25 @@ def main(
         print("")
         print(prompt)
 
-        _generate_latents(
-            prompt=prompt,
-            out_rootpath=out_rootpath,
-            model=model,
-            diffusion=diffusion,
-            skip_existing=skip_existing,
-        )
+        try:
+            _generate_latents(
+                prompt=prompt,
+                out_rootpath=out_rootpath,
+                model=model,
+                diffusion=diffusion,
+                skip_existing=skip_existing,
+            )
+        except Exception as e:
+            print("")
+            print("")
+            print("========================================")
+            print("Error while running prompt -> ", prompt)
+            print(e)
+            print("========================================")
+            print("")
+            print("")
+            continue
+
         print("")
     print("")
 
