@@ -7,8 +7,10 @@ text-to-3D/point-e/model_ckpts/
 text-to-3D/point-e/pointE_inference/
 text-to-3D/point-e/*.egg-info/
 text-to-3D/point-e/__pycache__/
-text-to-3D/point-e/point_e_model_cache/
-text-to-3D/shap-e/shap_e_model_cache/
+# text-to-3D/point-e/point_e_model_cache/
+text-to-3D/point-e/point_e_model_cache
+# text-to-3D/shap-e/shap_e_model_cache/
+text-to-3D/shap-e/shap_e_model_cache
 text-to-3D/shap-e/model_ckpts/
 text-to-3D/shap-e/shapE_inference/
 
