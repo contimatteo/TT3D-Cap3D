@@ -5,12 +5,12 @@ exit 1
 
 GPU=0
 ENV="test"
-PROMPT="n0_n1"
+PROMPT="n1"
 EXPERIMENT_PREFIX="t3bench/single"
 
-ROOT_DIR="/media/data2/mconti/TT3D"
-OUT_DIR="${ROOT_DIR}/outputs/${ENV}/${EXPERIMENT_PREFIX}/${PROMPT}"
-PROMPT_FILE="${ROOT_DIR}/prompts/${EXPERIMENT_PREFIX}/${PROMPT}.txt"
+ROOT_DIR="mconti/TT3D"
+PROMPT_FILE="/media/data2/${ROOT_DIR}/prompts/${EXPERIMENT_PREFIX}/${PROMPT}.txt"
+OUT_DIR="/media/data3/${ROOT_DIR}/outputs/${ENV}/${EXPERIMENT_PREFIX}/${PROMPT}"
 
 
 ###
