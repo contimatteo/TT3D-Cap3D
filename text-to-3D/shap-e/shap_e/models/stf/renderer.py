@@ -259,6 +259,16 @@ def render_views_from_stf(
     if output_srgb:
         tf_out.channels = _convert_srgb_to_linear(tf_out.channels)
 
+    # Make sure the raw meshes have colors.
+    with torch.autocast(device_type, enabled=False):
+        textures = tf_out.channels.float()
+        assert len(textures.shape) == 3 and textures.shape[-1] == len(
+            texture_channels
+        ), f"expected [meta_batch x inner_batch x texture_channels] field results, but got {textures.shape}"
+        for m, texture in zip(raw_meshes, textures):
+            texture = texture[: len(m.verts)]
+            m.vertex_channels = {name: ch for name, ch in zip(texture_channels, texture.unbind(-1))}
+
     args = dict(
         options=options,
         texture_channels=texture_channels,
