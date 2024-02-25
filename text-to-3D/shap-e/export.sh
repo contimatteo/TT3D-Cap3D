@@ -3,13 +3,13 @@
 exit 1
 
 
-GPU=0
-ENV="test"
-PROMPT="n0_n1"
+GPU=3
+ENV="report"
+PROMPT="n100"
 EXPERIMENT_PREFIX="t3bench/single"
 
-ROOT_DIR="/media/data2/mconti/TT3D"
-OUT_DIR="${ROOT_DIR}/outputs/${ENV}/${EXPERIMENT_PREFIX}/${PROMPT}"
+ROOT_DIR="mconti/TT3D"
+OUT_DIR="/media/data3/${ROOT_DIR}/outputs/${ENV}/${EXPERIMENT_PREFIX}/${PROMPT}"
 
 
 ###
